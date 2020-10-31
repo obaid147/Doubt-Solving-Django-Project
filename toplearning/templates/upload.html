@@ -1,0 +1,57 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <style>
+    body{
+        background-color: #8ea9c7;
+    }
+    .text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #3c4b69;
+    opacity: 50%;
+    font-size: 60px;
+    text-decoration: none;
+    }
+
+    </style>
+    {% if title %}
+        <title>
+            {{ title }}
+        </title>
+    {% else %}
+        <title>
+            Upload
+        </title>
+    {% endif %}
+</head>
+<body oncopy="return false;" onpaste="return false;" oncut="return false;">
+
+<center>&nbsp;&nbsp;&nbsp;
+    <div class=text>
+        {% if heading %}
+            {{ heading }}
+        {% else %}
+            Upload
+        {% endif %}
+    </div>
+<br>
+<a href="{% url 'home' %}" class="btn btn-danger btn-lg" style="width: 150px; opacity: 70%;">Home</a>
+
+
+<br><br>
+<form method='post' enctype="multipart/form-data" style="background-color:#E6E6FA">
+    {% csrf_token %}
+    <br>
+    {{ form.as_p }}
+    <br>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+</center>
+
+</body>
+</html>

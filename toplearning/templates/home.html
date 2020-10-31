@@ -1,0 +1,84 @@
+<html>
+<head>
+    <meta name="viewport" content="width=devicewidth, initialscale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <style>
+    body{
+        background-color: #8ea9c7;
+    }
+    .text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #3c4b69;
+    opacity: 50%;
+    font-size: 60px;
+    text-decoration: none;
+    }
+    h6{
+        opacity: 50%;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    #dis {
+        pointer-events: none;
+        cursor: default;
+    }
+    </style>
+    {% if title %}
+        <title>
+            {{ title }}
+        </title>
+    {% else %}
+        <title>
+            Learn at Your Pace
+        </title>
+    {% endif %}
+</head>
+<body oncopy="return false;" onpaste="return false;" oncut="return false;">
+<center>&nbsp;&nbsp;&nbsp;
+    <div class=text>
+        {% if heading %}
+            {{ heading }}
+        {% else %}
+            Learning Made Easier
+        {% endif %}
+    </div>
+    <img src='https://d10lpgp6xz60nq.cloudfront.net/images/doubt-book-illustration.svg' width="50%" height="30%">
+
+    
+<div class="card" style="width: 100%;">
+    <div class="card-body">
+        <h3>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quick Learning&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Live Classes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Doubt Solving
+        </h3>
+        
+        <br>
+        <img src='https://www.instasolv.com/assets/home/images/homepage/faster.svg'>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;
+        <img src='https://www.instasolv.com/assets/home/images/homepage/liveclass.svg'>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <img src='https://www.instasolv.com/assets/home/images/homepage/chatwithteacher.svg'>
+    </div>
+</div>
+
+<br>
+<a href="{% url 'downloads' %}" class="btn btn-danger btn-lg" style="width: 150px; opacity: 70%;">Downloads </a> &nbsp;&nbsp;&nbsp;
+<a href="#" class="btn btn-danger btn-lg" style="width: 150px; opacity: 70%;">Courses </a> &nbsp;&nbsp;&nbsp;
+<br><br>
+<a href="{% url 'upload' %}" class="btn btn-success btn-sm" style="width: 150px;">Admin</a>
+
+</center>
+
+<br>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

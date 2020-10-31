@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <style>
+    body{
+        background-color: #8ea9c7;
+    }
+    .text{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #3c4b69;
+    opacity: 50%;
+    font-size: 60px;
+    text-decoration: none;
+    }
+    </style>
+    <title>
+        Downloads
+    </title>
+</head>
+<body oncopy="return false;" onpaste="return false;" oncut="return false;">
+
+<center>&nbsp;&nbsp;&nbsp;
+    <div class=text>
+            Downloads
+    </div>
+<br>
+<a href="{% url 'home' %}" class="btn btn-danger btn-lg" style="width: 150px; opacity: 70%;">Home</a>
+<a href="#" class="btn btn-danger btn-lg" style="width: 150px; opacity: 70%;">Courses</a>
+<br><br>
+<table class="table" border="3">
+    <thread>
+        <tr>
+            <th>Title</th>
+            <th>Download</th>
+        </tr>
+    </thread>
+    <tbody>
+        {% for book in books %}
+        <tr>
+            <td>{{ book.title }}</td>
+            <td>
+            <a href="{{ book.pdf.url }}" target="_blank" class="btn btn-danger btn-sm">Download PDF</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</center>
+
+
+</body>
+</html>
